@@ -27,3 +27,28 @@ jobs:
           for tag in $(cat ./images/debian); do
               docker push quay.io/rblaine95/debian:$tag
             done
+  alpine:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Log in to Quay
+        run:  echo "${{ secrets.DOCKER_PASSWORD }}" | docker login quay.io -u  ${{ secrets.DOCKER_USERNAME }} --password-stdin
+      - name: Download dockertag.sh
+        run: |
+          wget https://git.io/JL72G -O dockertag.sh
+          bash dockertag.sh alpine > images/alpine
+      - name: Pull
+        run: |
+          for tag in $(cat images/alpine); do
+            docker pull alpine:$tag
+          done
+      - name: Tag
+        run: |
+          for tag in $(cat images/alpine); do
+            docker tag alpine:$tag quay.io/rblaine95/alpine:$tag
+          done
+      - name: Push
+        run: |
+          for tag in $(cat images/alpine); do
+            docker push quay.io/rblaine95/alpine:$tag
+          done
