@@ -1,0 +1,33 @@
+name: Mirror Dockerhub to Quay
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download images
+        run: |
+          export DEB='latest \
+                10 \
+                10.7 \
+                buster \
+                  \
+                10-slim \
+                10.7-slim \
+                buster-slim"
+          for tag in $DEB; do
+            docker pull debian:$tag && \
+            docker tag debian:$tag quay.io/rblaine95/debian:$tag
+          done
+      - name: Publish Debian
+        uses: jerray/publish-docker-action@master
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+          registry: quay.io
+          repository: rblaine95/debian
+          tags: latest,10,10.7,buster,10-slim,10.7-slim,buster-slim
