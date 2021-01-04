@@ -1,4 +1,4 @@
-name: Mirror Dockerhub to Github
+name: Mirror Dockerhub
 
 on:
   workflow_dispatch:
@@ -6,7 +6,7 @@ on:
     - cron: '0 0 * * *'
 
 env:
-  PLATFORMS: linux/arm/v7,linux/arm64/v8,linux/amd64
+  PLATFORMS: linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64/v8
 
 jobs:
   debian:
@@ -28,7 +28,7 @@ jobs:
               --platform $PLATFORMS \
               --build-arg IMAGE=debian \
               --build-arg VERSION=$tag \
-              --tag ghcr.io/${{ github.repository }}/debian:$tag \
+              --tag ghcr.io/${{ github.repository_owner }}/debian:$tag \
               --push \
               .
           done
@@ -51,7 +51,30 @@ jobs:
               --platform $PLATFORMS \
               --build-arg IMAGE=alpine \
               --build-arg VERSION=$tag \
-              --tag ghcr.io/${{ github.repository }}/alpine:$tag \
+              --tag ghcr.io/${{ github.repository_owner }}/alpine:$tag \
+              --push \
+              .
+          done
+  busybox:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Login to Github
+        uses: docker/login-action@v1
+        with:
+          registry: ghcr.io
+          username: ${{ github.repository_owner }}
+          password: ${{ secrets.GHCR_PAT }}
+      - name: Install Buildx
+        uses: docker/setup-buildx-action@v1.0.4
+      - name: Build
+        run: |
+          for tag in $(cat ./images/busybox); do
+            docker buildx build \
+              --platform $PLATFORMS \
+              --build-arg IMAGE=busybox \
+              --build-arg VERSION=$tag \
+              --tag ghcr.io/${{ github.repository_owner }}/busybox:$tag \
               --push \
               .
           done
