@@ -28,6 +28,7 @@ jobs:
               --platform $PLATFORMS \
               --build-arg IMAGE=debian \
               --build-arg VERSION=$tag \
+              --label org.opencontainers.image.source=https://github.com/${{ github.repository }} \
               --tag ghcr.io/${{ github.repository_owner }}/debian:$tag \
               --push \
               .
@@ -51,6 +52,7 @@ jobs:
               --platform $PLATFORMS \
               --build-arg IMAGE=alpine \
               --build-arg VERSION=$tag \
+              --label org.opencontainers.image.source=https://github.com/${{ github.repository }} \
               --tag ghcr.io/${{ github.repository_owner }}/alpine:$tag \
               --push \
               .
@@ -74,6 +76,7 @@ jobs:
               --platform $PLATFORMS \
               --build-arg IMAGE=busybox \
               --build-arg VERSION=$tag \
+              --label org.opencontainers.image.source=https://github.com/${{ github.repository }} \
               --tag ghcr.io/${{ github.repository_owner }}/busybox:$tag \
               --push \
               .
