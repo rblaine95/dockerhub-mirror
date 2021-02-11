@@ -9,6 +9,7 @@ Mirrored Images:
 * [`busybox`](https://ghcr.io/rblaine95/busybox)
 * [`debian`](https://ghcr.io/rblaine95/debian)
 * [`golang`](https://ghcr.io/rblaine95/golang)
+* [`openjdk`](https://ghcr.io/rblaine95/openjdk)
 
 [github-actions-badge]: https://img.shields.io/github/workflow/status/rblaine95/dockerhub-mirror/Mirror%20Dockerhub/master "Github Workflow Status (master)"
 [github-actions-link]: https://github.com/rblaine95/dockerhub-mirror/actions?query=workflow%3AMirror%20Dockerhub
