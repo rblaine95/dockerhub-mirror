@@ -137,3 +137,29 @@ jobs:
               --push \
               .
           done
+  rust:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Login to Github
+        uses: docker/login-action@v1
+        with:
+          registry: ghcr.io
+          username: ${{ github.repository_owner }}
+          password: ${{ secrets.GHCR_PAT }}
+      - name: Install Buildx
+        uses: docker/setup-buildx-action@v1.0.4
+      - name: Build
+        env:
+          PLATFORMS: linux/amd64,linux/arm64/v8
+        run: |
+          for tag in $(cat ./images/rust); do
+            docker buildx build \
+              --platform $PLATFORMS \
+              --build-arg IMAGE=rust \
+              --build-arg TAG=$tag \
+              --label org.opencontainers.image.source=https://github.com/${{ github.repository }} \
+              --tag ghcr.io/${{ github.repository_owner }}/rust:$tag \
+              --push \
+              .
+          done
