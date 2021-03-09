@@ -9,6 +9,7 @@ Mirrored Images:
 * [`busybox`](https://ghcr.io/rblaine95/busybox)
 * [`debian`](https://ghcr.io/rblaine95/debian)
 * [`golang`](https://ghcr.io/rblaine95/golang)
+* [`node`](https://ghcr.io/rblaine95/node)
 * [`mysql`](https://ghcr.io/rblaine95/mysql)
 * [`openjdk`](https://ghcr.io/rblaine95/openjdk)
 * [`postgres`](https://ghcr.io/rblaine95/postgres)
