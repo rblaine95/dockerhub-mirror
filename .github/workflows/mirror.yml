@@ -22,7 +22,7 @@ jobs:
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v1
       - name: Install Buildx
-        uses: docker/setup-buildx-action@v1.1.2
+        uses: docker/setup-buildx-action@v1.2.0
       - name: Build
         run: |
           for tag in $(cat ./images/alpine); do
@@ -48,7 +48,7 @@ jobs:
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v1
       - name: Install Buildx
-        uses: docker/setup-buildx-action@v1.1.2
+        uses: docker/setup-buildx-action@v1.2.0
       - name: Build
         run: |
           for tag in $(cat ./images/busybox); do
@@ -74,7 +74,7 @@ jobs:
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v1
       - name: Install Buildx
-        uses: docker/setup-buildx-action@v1.1.2
+        uses: docker/setup-buildx-action@v1.2.0
       - name: Build
         run: |
           for tag in $(cat ./images/debian); do
@@ -98,7 +98,7 @@ jobs:
           username: ${{ github.repository_owner }}
           password: ${{ secrets.GHCR_PAT }}
       - name: Install Buildx
-        uses: docker/setup-buildx-action@v1.1.2
+        uses: docker/setup-buildx-action@v1.2.0
       - name: Build
         run: |
           for tag in $(cat ./images/golang); do
@@ -122,7 +122,7 @@ jobs:
           username: ${{ github.repository_owner }}
           password: ${{ secrets.GHCR_PAT }}
       - name: Install Buildx
-        uses: docker/setup-buildx-action@v1.1.2
+        uses: docker/setup-buildx-action@v1.2.0
       - name: Build
         env:
           PLATFORMS: linux/amd64
@@ -148,7 +148,7 @@ jobs:
           username: ${{ github.repository_owner }}
           password: ${{ secrets.GHCR_PAT }}
       - name: Install Buildx
-        uses: docker/setup-buildx-action@v1.1.2
+        uses: docker/setup-buildx-action@v1.2.0
       - name: Build
         env:
           PLATFORMS: linux/amd64,linux/arm/v7,linux/arm64/v8
@@ -174,7 +174,7 @@ jobs:
           username: ${{ github.repository_owner }}
           password: ${{ secrets.GHCR_PAT }}
       - name: Install Buildx
-        uses: docker/setup-buildx-action@v1.1.2
+        uses: docker/setup-buildx-action@v1.2.0
       - name: Build
         env:
           PLATFORMS: linux/amd64
@@ -200,7 +200,7 @@ jobs:
           username: ${{ github.repository_owner }}
           password: ${{ secrets.GHCR_PAT }}
       - name: Install Buildx
-        uses: docker/setup-buildx-action@v1.1.2
+        uses: docker/setup-buildx-action@v1.2.0
       - name: Build
         run: |
           for tag in $(cat ./images/postgres); do
@@ -224,7 +224,7 @@ jobs:
           username: ${{ github.repository_owner }}
           password: ${{ secrets.GHCR_PAT }}
       - name: Install Buildx
-        uses: docker/setup-buildx-action@v1.1.2
+        uses: docker/setup-buildx-action@v1.2.0
       - name: Build
         env:
           PLATFORMS: linux/amd64,linux/arm64/v8
