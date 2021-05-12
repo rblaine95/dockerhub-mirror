@@ -12,7 +12,7 @@ jobs:
   alpine:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v2.3.4
       - name: Login to Github
         uses: docker/login-action@v1.9.0
         with:
@@ -38,7 +38,7 @@ jobs:
   busybox:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v2.3.4
       - name: Login to Github
         uses: docker/login-action@v1.9.0
         with:
@@ -64,7 +64,7 @@ jobs:
   debian:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v2.3.4
       - name: Login to Github
         uses: docker/login-action@v1.9.0
         with:
@@ -90,7 +90,7 @@ jobs:
   golang:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v2.3.4
       - name: Login to Github
         uses: docker/login-action@v1.9.0
         with:
@@ -114,7 +114,7 @@ jobs:
   kubectl:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v2.3.4
       - name: Login to Github
         uses: docker/login-action@v1.9.0
         with:
@@ -140,7 +140,7 @@ jobs:
   mysql:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v2.3.4
       - name: Login to Github
         uses: docker/login-action@v1.9.0
         with:
@@ -166,7 +166,7 @@ jobs:
   node:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v2.3.4
       - name: Login to Github
         uses: docker/login-action@v1.9.0
         with:
@@ -192,7 +192,7 @@ jobs:
   openjdk:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v2.3.4
       - name: Login to Github
         uses: docker/login-action@v1.9.0
         with:
@@ -218,7 +218,7 @@ jobs:
   postgres:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v2.3.4
       - name: Login to Github
         uses: docker/login-action@v1.9.0
         with:
@@ -242,7 +242,7 @@ jobs:
   rust:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v2.3.4
       - name: Login to Github
         uses: docker/login-action@v1.9.0
         with:
