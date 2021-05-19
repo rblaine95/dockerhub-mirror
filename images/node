@@ -2,6 +2,7 @@ latest
 
 current
 
+16
 15
 14
 13
@@ -9,19 +10,24 @@ current
 
 buster
 current-buster
+16-buster
 15-buster
 14-buster
 13-buster
 12-buster
 
+slim
 buster-slim
+current-slim
 current-buster-slim
+16-slim
 15-slim
 14-slim
 13-slim
 12-slim
 
 current-alpine
+16-alpine
 15-alpine
 14-alpine
 13-alpine
