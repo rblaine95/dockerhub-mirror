@@ -14,6 +14,7 @@ Mirrored Images:
 * [`mysql`](https://ghcr.io/rblaine95/mysql)
 * [`openjdk`](https://ghcr.io/rblaine95/openjdk)
 * [`postgres`](https://ghcr.io/rblaine95/postgres)
+* [`python`](https://ghcr.io/rblaine95/python)
 * [`rust`](https://ghcr.io/rblaine95/rust)
 
 [github-actions-badge]: https://img.shields.io/github/workflow/status/rblaine95/dockerhub-mirror/Mirror%20Dockerhub/master "Github Workflow Status (master)"
