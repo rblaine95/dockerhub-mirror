@@ -1,25 +1,30 @@
 latest
 
 1
+1.52
 1.51
 1.50
 
 slim
 1-slim
+1.52-slim
 1.51-slim
 1.50-slim
 
 slim-buster
 1-slim-buster
+1.52-slim-buster
 1.51-slim-buster
 1.50-slim-buster
 
 buster
 1-buster
+1.52-buster
 1.51-buster
 1.50-buster
 
 alpine
 1-alpine
+1.52-alpine
 1.51-alpine
 1.50-alpine
