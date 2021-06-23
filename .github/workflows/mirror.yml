@@ -14,7 +14,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2.3.4
       - name: Login to Github
-        uses: docker/login-action@v1.9.0
+        uses: docker/login-action@v1.10.0
         with:
           registry: ghcr.io
           username: ${{ github.repository_owner }}
@@ -40,7 +40,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2.3.4
       - name: Login to Github
-        uses: docker/login-action@v1.9.0
+        uses: docker/login-action@v1.10.0
         with:
           registry: ghcr.io
           username: ${{ github.repository_owner }}
@@ -66,7 +66,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2.3.4
       - name: Login to Github
-        uses: docker/login-action@v1.9.0
+        uses: docker/login-action@v1.10.0
         with:
           registry: ghcr.io
           username: ${{ github.repository_owner }}
@@ -92,7 +92,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2.3.4
       - name: Login to Github
-        uses: docker/login-action@v1.9.0
+        uses: docker/login-action@v1.10.0
         with:
           registry: ghcr.io
           username: ${{ github.repository_owner }}
@@ -118,7 +118,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2.3.4
       - name: Login to Github
-        uses: docker/login-action@v1.9.0
+        uses: docker/login-action@v1.10.0
         with:
           registry: ghcr.io
           username: ${{ github.repository_owner }}
@@ -146,7 +146,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2.3.4
       - name: Login to Github
-        uses: docker/login-action@v1.9.0
+        uses: docker/login-action@v1.10.0
         with:
           registry: ghcr.io
           username: ${{ github.repository_owner }}
@@ -174,7 +174,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2.3.4
       - name: Login to Github
-        uses: docker/login-action@v1.9.0
+        uses: docker/login-action@v1.10.0
         with:
           registry: ghcr.io
           username: ${{ github.repository_owner }}
@@ -202,7 +202,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2.3.4
       - name: Login to Github
-        uses: docker/login-action@v1.9.0
+        uses: docker/login-action@v1.10.0
         with:
           registry: ghcr.io
           username: ${{ github.repository_owner }}
@@ -230,7 +230,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2.3.4
       - name: Login to Github
-        uses: docker/login-action@v1.9.0
+        uses: docker/login-action@v1.10.0
         with:
           registry: ghcr.io
           username: ${{ github.repository_owner }}
@@ -256,7 +256,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2.3.4
       - name: Login to Github
-        uses: docker/login-action@v1.9.0
+        uses: docker/login-action@v1.10.0
         with:
           registry: ghcr.io
           username: ${{ github.repository_owner }}
@@ -282,7 +282,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2.3.4
       - name: Login to Github
-        uses: docker/login-action@v1.9.0
+        uses: docker/login-action@v1.10.0
         with:
           registry: ghcr.io
           username: ${{ github.repository_owner }}
