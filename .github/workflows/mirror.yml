@@ -5,12 +5,46 @@ on:
   schedule:
     - cron: '0 0 * * *'
 
-env:
-  PLATFORMS: linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64/v8
-
 jobs:
-  alpine:
+  mirror:
+    name: Mirror
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        include:
+          - image: alpine
+            repo: docker.io
+            platforms: linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64/v8
+          - image: busybox
+            repo: docker.io
+            platforms: linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64/v8
+          - image: debian
+            repo: docker.io
+            platforms: linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64/v8
+          - image: golang
+            repo: docker.io
+            platforms: linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64/v8
+          - image: kubectl
+            repo: docker.io/bitnami
+            platforms: linux/amd64
+          - image: mysql
+            repo: docker.io
+            platforms: linux/amd64
+          - image: node
+            repo: docker.io
+            platforms: linux/amd64,linux/arm/v7,linux/arm64/v8
+          - image: openjdk
+            repo: docker.io
+            platforms: linux/amd64
+          - image: postgres
+            repo: docker.io
+            platforms: linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64/v8
+          - image: python
+            repo: docker.io
+            platforms: linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64/v8
+          - image: rust
+            repo: docker.io
+            platforms: linux/amd64,linux/arm64/v8
     steps:
       - uses: actions/checkout@v2.3.4
       - name: Login to Github
@@ -25,283 +59,14 @@ jobs:
         uses: docker/setup-buildx-action@v1.5.0
       - name: Build
         run: |
-          for tag in $(cat ./images/alpine); do
+          for tag in $(cat ./images/${{ matrix.image }}); do
             docker buildx build \
-              --platform $PLATFORMS \
-              --build-arg IMAGE=alpine \
+              --platform ${{ matrix.platforms }} \
+              --build-arg REPO=${{ matrix.repo }} \
+              --build-arg IMAGE=${{ matrix.image }} \
               --build-arg TAG=$tag \
               --label org.opencontainers.image.source=https://github.com/${{ github.repository }} \
-              --tag ghcr.io/${{ github.repository_owner }}/alpine:$tag \
-              --push \
-              .
-          done
-  busybox:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2.3.4
-      - name: Login to Github
-        uses: docker/login-action@v1.10.0
-        with:
-          registry: ghcr.io
-          username: ${{ github.repository_owner }}
-          password: ${{ secrets.GHCR_PAT }}
-      - name: Set up QEMU
-        uses: docker/setup-qemu-action@v1.2.0
-      - name: Install Buildx
-        uses: docker/setup-buildx-action@v1.5.0
-      - name: Build
-        run: |
-          for tag in $(cat ./images/busybox); do
-            docker buildx build \
-              --platform $PLATFORMS \
-              --build-arg IMAGE=busybox \
-              --build-arg TAG=$tag \
-              --label org.opencontainers.image.source=https://github.com/${{ github.repository }} \
-              --tag ghcr.io/${{ github.repository_owner }}/busybox:$tag \
-              --push \
-              .
-          done
-  debian:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2.3.4
-      - name: Login to Github
-        uses: docker/login-action@v1.10.0
-        with:
-          registry: ghcr.io
-          username: ${{ github.repository_owner }}
-          password: ${{ secrets.GHCR_PAT }}
-      - name: Set up QEMU
-        uses: docker/setup-qemu-action@v1.2.0
-      - name: Install Buildx
-        uses: docker/setup-buildx-action@v1.5.0
-      - name: Build
-        run: |
-          for tag in $(cat ./images/debian); do
-            docker buildx build \
-              --platform $PLATFORMS \
-              --build-arg IMAGE=debian \
-              --build-arg TAG=$tag \
-              --label org.opencontainers.image.source=https://github.com/${{ github.repository }} \
-              --tag ghcr.io/${{ github.repository_owner }}/debian:$tag \
-              --push \
-              .
-          done
-  golang:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2.3.4
-      - name: Login to Github
-        uses: docker/login-action@v1.10.0
-        with:
-          registry: ghcr.io
-          username: ${{ github.repository_owner }}
-          password: ${{ secrets.GHCR_PAT }}
-      - name: Set up QEMU
-        uses: docker/setup-qemu-action@v1.2.0
-      - name: Install Buildx
-        uses: docker/setup-buildx-action@v1.5.0
-      - name: Build
-        run: |
-          for tag in $(cat ./images/golang); do
-            docker buildx build \
-              --platform $PLATFORMS \
-              --build-arg IMAGE=golang \
-              --build-arg TAG=$tag \
-              --label org.opencontainers.image.source=https://github.com/${{ github.repository }} \
-              --tag ghcr.io/${{ github.repository_owner }}/golang:$tag \
-              --push \
-              .
-          done
-  kubectl:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2.3.4
-      - name: Login to Github
-        uses: docker/login-action@v1.10.0
-        with:
-          registry: ghcr.io
-          username: ${{ github.repository_owner }}
-          password: ${{ secrets.GHCR_PAT }}
-      - name: Set up QEMU
-        uses: docker/setup-qemu-action@v1.2.0
-      - name: Install Buildx
-        uses: docker/setup-buildx-action@v1.5.0
-      - name: Build
-        env:
-          PLATFORMS: linux/amd64
-        run: |
-          for tag in $(cat ./images/kubectl); do
-            docker buildx build \
-              --platform $PLATFORMS \
-              --build-arg IMAGE=bitnami/kubectl \
-              --build-arg TAG=$tag \
-              --label org.opencontainers.image.source=https://github.com/${{ github.repository }} \
-              --tag ghcr.io/${{ github.repository_owner }}/kubectl:$tag \
-              --push \
-              .
-          done
-  mysql:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2.3.4
-      - name: Login to Github
-        uses: docker/login-action@v1.10.0
-        with:
-          registry: ghcr.io
-          username: ${{ github.repository_owner }}
-          password: ${{ secrets.GHCR_PAT }}
-      - name: Set up QEMU
-        uses: docker/setup-qemu-action@v1.2.0
-      - name: Install Buildx
-        uses: docker/setup-buildx-action@v1.5.0
-      - name: Build
-        env:
-          PLATFORMS: linux/amd64
-        run: |
-          for tag in $(cat ./images/mysql); do
-            docker buildx build \
-              --platform $PLATFORMS \
-              --build-arg IMAGE=mysql \
-              --build-arg TAG=$tag \
-              --label org.opencontainers.image.source=https://github.com/${{ github.repository }} \
-              --tag ghcr.io/${{ github.repository_owner }}/mysql:$tag \
-              --push \
-              .
-          done
-  node:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2.3.4
-      - name: Login to Github
-        uses: docker/login-action@v1.10.0
-        with:
-          registry: ghcr.io
-          username: ${{ github.repository_owner }}
-          password: ${{ secrets.GHCR_PAT }}
-      - name: Set up QEMU
-        uses: docker/setup-qemu-action@v1.2.0
-      - name: Install Buildx
-        uses: docker/setup-buildx-action@v1.5.0
-      - name: Build
-        env:
-          PLATFORMS: linux/amd64,linux/arm/v7,linux/arm64/v8
-        run: |
-          for tag in $(cat ./images/node); do
-            docker buildx build \
-              --platform $PLATFORMS \
-              --build-arg IMAGE=node \
-              --build-arg TAG=$tag \
-              --label org.opencontainers.image.source=https://github.com/${{ github.repository }} \
-              --tag ghcr.io/${{ github.repository_owner }}/node:$tag \
-              --push \
-              .
-          done
-  openjdk:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2.3.4
-      - name: Login to Github
-        uses: docker/login-action@v1.10.0
-        with:
-          registry: ghcr.io
-          username: ${{ github.repository_owner }}
-          password: ${{ secrets.GHCR_PAT }}
-      - name: Set up QEMU
-        uses: docker/setup-qemu-action@v1.2.0
-      - name: Install Buildx
-        uses: docker/setup-buildx-action@v1.5.0
-      - name: Build
-        env:
-          PLATFORMS: linux/amd64
-        run: |
-          for tag in $(cat ./images/openjdk); do
-            docker buildx build \
-              --platform $PLATFORMS \
-              --build-arg IMAGE=openjdk \
-              --build-arg TAG=$tag \
-              --label org.opencontainers.image.source=https://github.com/${{ github.repository }} \
-              --tag ghcr.io/${{ github.repository_owner }}/openjdk:$tag \
-              --push \
-              .
-          done
-  postgres:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2.3.4
-      - name: Login to Github
-        uses: docker/login-action@v1.10.0
-        with:
-          registry: ghcr.io
-          username: ${{ github.repository_owner }}
-          password: ${{ secrets.GHCR_PAT }}
-      - name: Set up QEMU
-        uses: docker/setup-qemu-action@v1.2.0
-      - name: Install Buildx
-        uses: docker/setup-buildx-action@v1.5.0
-      - name: Build
-        run: |
-          for tag in $(cat ./images/postgres); do
-            docker buildx build \
-              --platform $PLATFORMS \
-              --build-arg IMAGE=postgres \
-              --build-arg TAG=$tag \
-              --label org.opencontainers.image.source=https://github.com/${{ github.repository }} \
-              --tag ghcr.io/${{ github.repository_owner }}/postgres:$tag \
-              --push \
-              .
-          done
-  python:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2.3.4
-      - name: Login to Github
-        uses: docker/login-action@v1.10.0
-        with:
-          registry: ghcr.io
-          username: ${{ github.repository_owner }}
-          password: ${{ secrets.GHCR_PAT }}
-      - name: Set up QEMU
-        uses: docker/setup-qemu-action@v1.2.0
-      - name: Install Buildx
-        uses: docker/setup-buildx-action@v1.5.0
-      - name: Build
-        run: |
-          for tag in $(cat ./images/python); do
-            docker buildx build \
-              --platform $PLATFORMS \
-              --build-arg IMAGE=python \
-              --build-arg TAG=$tag \
-              --label org.opencontainers.image.source=https://github.com/${{ github.repository }} \
-              --tag ghcr.io/${{ github.repository_owner }}/python:$tag \
-              --push \
-              .
-          done
-  rust:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2.3.4
-      - name: Login to Github
-        uses: docker/login-action@v1.10.0
-        with:
-          registry: ghcr.io
-          username: ${{ github.repository_owner }}
-          password: ${{ secrets.GHCR_PAT }}
-      - name: Set up QEMU
-        uses: docker/setup-qemu-action@v1.2.0
-      - name: Install Buildx
-        uses: docker/setup-buildx-action@v1.5.0
-      - name: Build
-        env:
-          PLATFORMS: linux/amd64,linux/arm64/v8
-        run: |
-          for tag in $(cat ./images/rust); do
-            docker buildx build \
-              --platform $PLATFORMS \
-              --build-arg IMAGE=rust \
-              --build-arg TAG=$tag \
-              --label org.opencontainers.image.source=https://github.com/${{ github.repository }} \
-              --tag ghcr.io/${{ github.repository_owner }}/rust:$tag \
+              --tag ghcr.io/${{ github.repository_owner }}/${{ matrix.image }}:$tag \
               --push \
               .
           done
