@@ -27,6 +27,14 @@ buster
 1.51-buster
 1.50-buster
 
+slim-bullseye
+1-slim-bullseye
+1.53-slim-bullseye
+
+bullseye
+1-bullseye
+1.53-bullseye
+
 alpine
 1-alpine
 1.53-alpine
