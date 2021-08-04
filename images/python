@@ -23,6 +23,12 @@ rc-alpine
 3.7-slim-buster
 3.6-slim-buster
 
+3-slim
+3.9-slim
+3.8-slim
+3.7-slim
+3.6-slim
+
 3-alpine
 3.9-alpine
 3.8-alpine
