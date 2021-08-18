@@ -1,15 +1,22 @@
 latest
 
 1
+1.17
 1.16
 1.15
 
+bullseye
+1-bullseye
+1.17-bullseye
+
 buster
 1-buster
+1.17-buster
 1.16-buster
 1.15-buster
 
 alpine
 1-alpine
+1.17-alpine
 1.16-alpine
 1.15-alpine

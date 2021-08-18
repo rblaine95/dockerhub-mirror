@@ -8,6 +8,18 @@ current
 13
 12
 
+bullseye
+current-bullseye
+16-bullseye
+14-bullseye
+12-bullseye
+
+bullseye-slim
+current-bullseye-slim
+16-bullseye-slim
+14-bullseye-slim
+12-bullseye-slim
+
 buster
 current-buster
 16-buster
