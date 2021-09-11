@@ -41,12 +41,22 @@ jobs:
           registry: ghcr.io
           username: ${{ github.repository_owner }}
           password: ${{ secrets.GHCR_PAT }}
+      - uses: docker/login-action@v2
+        with:
+          registry: quay.io
+          username: ${{ secrets.QUAY_USERNAME }}
+          password: ${{ secrets.QUAY_PASSWORD }}
       - uses: actions/setup-go@v2
       - uses: imjasonh/setup-crane@v0.1
       - name: Mirror
         run: |
+          QUAY_USERNAME=$(echo ${{ secrets.QUAY_USERNAME }} | cut -f1 -d"+")
           for tag in $(cat ./images/${{ matrix.image }}); do
             crane copy \
               ${{ matrix.repo }}/${{ matrix.image }}:$tag \
               ghcr.io/${{ github.repository_owner }}/${{ matrix.image }}:$tag
+
+            crane copy \
+              ${{ matrix.repo }}/${{ matrix.image }}:$tag \
+              quay.io/${QUAY_USERNAME}/${{ matrix.image }}:$tag
           done
