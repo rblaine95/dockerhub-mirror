@@ -2,6 +2,7 @@ latest
 
 current
 
+18
 17
 16
 15
@@ -11,6 +12,7 @@ current
 
 bullseye
 current-bullseye
+18-bullseye
 17-bullseye
 16-bullseye
 14-bullseye
@@ -18,6 +20,7 @@ current-bullseye
 
 bullseye-slim
 current-bullseye-slim
+18-bullseye-slim
 17-bullseye-slim
 16-bullseye-slim
 14-bullseye-slim
@@ -25,6 +28,7 @@ current-bullseye-slim
 
 buster
 current-buster
+18-buster
 17-buster
 16-buster
 15-buster
@@ -36,6 +40,7 @@ slim
 buster-slim
 current-slim
 current-buster-slim
+18-slim
 17-slim
 16-slim
 15-slim
@@ -44,6 +49,7 @@ current-buster-slim
 12-slim
 
 current-alpine
+18-alpine
 17-alpine
 16-alpine
 15-alpine
