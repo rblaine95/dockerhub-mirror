@@ -52,7 +52,7 @@ jobs:
           registry: ghcr.io
           username: ${{ github.repository_owner }}
           password: ${{ secrets.GHCR_PAT }}
-      - uses: docker/setup-qemu-action@v1
+      - uses: docker/setup-qemu-action@v2
       - uses: docker/setup-buildx-action@v2
       - name: Mirror
         run: |
