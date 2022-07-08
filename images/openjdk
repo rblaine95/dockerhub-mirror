@@ -1,5 +1,6 @@
 latest
 
+20
 19
 18
 17
@@ -13,6 +14,7 @@ latest
 9
 8
 
+20-slim
 19-slim
 18-slim
 17-slim
@@ -26,6 +28,8 @@ latest
 8-slim
 
 alpine
+19-alpine
+18-alpine
 17-alpine
 16-alpine
 15-alpine
