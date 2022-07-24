@@ -5,6 +5,7 @@ bookworm-slim
 
 bullseye
 11
+11.4
 11.3
 11.2
 11.1
@@ -12,6 +13,7 @@ bullseye
 
 bullseye-slim
 11-slim
+11.4-slim
 11.3-slim
 11.2-slim
 11.1-slim
