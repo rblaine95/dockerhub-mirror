@@ -21,6 +21,7 @@ bullseye-slim
 
 buster
 10
+10.12
 10.11
 10.10
 10.9
@@ -29,6 +30,7 @@ buster
 
 buster-slim
 10-slim
+10.12-slim
 10.11-slim
 10.10-slim
 10.9-slim
