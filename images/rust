@@ -1,6 +1,7 @@
 latest
 
 1
+1.66
 1.65
 1.64
 1.63
@@ -20,6 +21,7 @@ latest
 
 slim
 1-slim
+1.66-slim
 1.65-slim
 1.64-slim
 1.63-slim
@@ -39,6 +41,7 @@ slim
 
 slim-buster
 1-slim-buster
+1.66-slim-buster
 1.65-slim-buster
 1.64-slim-buster
 1.63-slim-buster
@@ -58,6 +61,7 @@ slim-buster
 
 buster
 1-buster
+1.66-buster
 1.65-buster
 1.64-buster
 1.63-buster
@@ -77,6 +81,7 @@ buster
 
 slim-bullseye
 1-slim-bullseye
+1.66-slim-bullseye
 1.65-slim-bullseye
 1.64-slim-bullseye
 1.63-slim-bullseye
@@ -93,6 +98,7 @@ slim-bullseye
 
 bullseye
 1-bullseye
+1.66-bullseye
 1.65-bullseye
 1.64-bullseye
 1.63-bullseye
@@ -111,6 +117,7 @@ bullseye
 
 alpine
 1-alpine
+1.66-alpine
 1.65-alpine
 1.64-alpine
 1.63-alpine
