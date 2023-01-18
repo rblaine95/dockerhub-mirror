@@ -5,6 +5,7 @@ bookworm-slim
 
 bullseye
 11
+11.6
 11.5
 11.4
 11.3
@@ -14,6 +15,7 @@ bullseye
 
 bullseye-slim
 11-slim
+11.6-slim
 11.5-slim
 11.4-slim
 11.3-slim
@@ -23,6 +25,7 @@ bullseye-slim
 
 buster
 10
+10.13
 10.12
 10.11
 10.10
@@ -32,6 +35,7 @@ buster
 
 buster-slim
 10-slim
+10.13-slim
 10.12-slim
 10.11-slim
 10.10-slim
