@@ -8,7 +8,6 @@ Mirrored Images:
 * [`alpine`](https://ghcr.io/rblaine95/alpine)
 * [`busybox`](https://ghcr.io/rblaine95/busybox)
 * [`debian`](https://ghcr.io/rblaine95/debian)
-* [`kubectl`](https://ghcr.io/rblaine95/kubectl)
 * [`golang`](https://ghcr.io/rblaine95/golang)
 * [`node`](https://ghcr.io/rblaine95/node)
 * [`mysql`](https://ghcr.io/rblaine95/mysql)

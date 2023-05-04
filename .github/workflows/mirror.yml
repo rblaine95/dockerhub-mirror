@@ -20,8 +20,6 @@ jobs:
             repo: docker.io
           - image: golang
             repo: docker.io
-          - image: kubectl
-            repo: quay.io/zenlab
           - image: mysql
             repo: docker.io
           - image: node
