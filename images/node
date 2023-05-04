@@ -4,6 +4,7 @@ current
 
 lts
 
+20
 19
 18
 17
@@ -16,6 +17,7 @@ lts
 bullseye
 current-bullseye
 lts-bullseye
+20-bullseye
 19-bullseye
 18-bullseye
 17-bullseye
@@ -26,6 +28,7 @@ lts-bullseye
 buster
 current-buster
 lts-buster
+20-buster
 19-buster
 18-buster
 17-buster
@@ -38,6 +41,7 @@ lts-buster
 slim
 current-slim
 lts-slim
+20-slim
 19-slim
 18-slim
 17-slim
@@ -50,6 +54,7 @@ lts-slim
 bullseye-slim
 current-bullseye-slim
 lts-bullseye-slim
+20-bullseye-slim
 19-bullseye-slim
 18-bullseye-slim
 17-bullseye-slim
@@ -59,6 +64,7 @@ lts-bullseye-slim
 
 current-alpine
 lts-alpine
+20-alpine
 19-alpine
 18-alpine
 17-alpine
