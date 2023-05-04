@@ -32,13 +32,16 @@ jobs:
             repo: docker.io
           - image: rust
             repo: docker.io
+    permissions:
+      contents: read
+      packages: write
     steps:
       - uses: actions/checkout@v3
       - uses: docker/login-action@v2
         with:
           registry: ghcr.io
           username: ${{ github.repository_owner }}
-          password: ${{ secrets.GHCR_PAT }}
+          password: ${{ github.token }}
       - uses: actions/setup-go@v4
       - uses: imjasonh/setup-crane@v0.3
       - name: Mirror
