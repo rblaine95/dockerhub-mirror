@@ -1,7 +1,12 @@
 latest
 
 bookworm
+12
+12.0
+
 bookworm-slim
+12-slim
+12.0-slim
 
 bullseye
 11
