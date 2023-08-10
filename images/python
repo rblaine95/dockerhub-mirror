@@ -15,6 +15,22 @@ rc-alpine
 3.7
 3.6
 
+bookworm
+3-bookworm
+3.11-bookworm
+3.10-bookworm
+3.9-bookworm
+3.8-bookworm
+3.7-bookworm
+
+slim-bookworm
+3-slim-bookworm
+3.11-slim-bookworm
+3.10-slim-bookworm
+3.9-slim-bookworm
+3.8-slim-bookworm
+3.7-slim-bookworm
+
 bullseye
 3-bullseye
 3.11-bullseye
