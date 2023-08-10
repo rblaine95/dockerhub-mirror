@@ -1,6 +1,7 @@
 latest
 
 1
+1.21
 1.20
 1.19
 1.18
@@ -10,6 +11,7 @@ latest
 
 bullseye
 1-bullseye
+1.21-bullseye
 1.20-bullseye
 1.19-bullseye
 1.18-bullseye
@@ -27,6 +29,7 @@ buster
 
 alpine
 1-alpine
+1.21-alpine
 1.20-alpine
 1.19-alpine
 1.18-alpine
