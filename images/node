@@ -14,6 +14,13 @@ lts
 13
 12
 
+bookworm
+current-bookworm
+lts-bookworm-slim
+20-bookworm
+18-bookworm
+16-bookworm
+
 bullseye
 current-bullseye
 lts-bullseye
@@ -50,6 +57,13 @@ lts-slim
 14-slim
 13-slim
 12-slim
+
+bookworm-slim
+current-bookworm-slim
+lts-bookworm-slim
+20-bookworm-slim
+18-bookworm-slim
+16-bookworm-slim
 
 bullseye-slim
 current-bullseye-slim
