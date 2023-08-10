@@ -49,6 +49,22 @@ slim
 1.51-slim
 1.50-slim
 
+slim-bookworm
+1-slim-bookworm
+1.71-slim-bookworm
+1.70-slim-bookworm
+1.69-slim-bookworm
+1.68-slim-bookworm
+1.67-slim-bookworm
+
+bookworm
+1-bookworm
+1.71-bookworm
+1.70-bookworm
+1.69-bookworm
+1.68-bookworm
+1.67-bookworm
+
 slim-buster
 1-slim-buster
 1.71-slim-buster
