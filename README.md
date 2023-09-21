@@ -1,6 +1,7 @@
 # DockerHub Mirror
-DockerHub Mirror on Github powered by Github Actions and [Crane](https://github.com/google/go-containerregistry/tree/main/cmd/crane)  
-[![GitHub Workflow Status (branch)][github-actions-badge]][github-actions-link] 
+DockerHub Mirror on Github powered by Github Actions and [Crane](https://github.com/google/go-containerregistry/tree/main/cmd/crane)
+
+[![GitHub Workflow Status (branch)][github-actions-badge]][github-actions-link]
 
 GitHub Actions scheduled to run daily at Midnight UTC to mirror some images to [GHCR.io](https://ghcr.io), bypassing rate limits
 
@@ -11,7 +12,7 @@ Mirrored Images:
 * [`golang`](https://ghcr.io/rblaine95/golang)
 * [`node`](https://ghcr.io/rblaine95/node)
 * [`mysql`](https://ghcr.io/rblaine95/mysql)
-* [`openjdk`](https://ghcr.io/rblaine95/openjdk)
+* [`openjdk`](https://ghcr.io/rblaine95/openjdk) **DEPRECATED** - docker-library/openjdk#505
 * [`postgres`](https://ghcr.io/rblaine95/postgres)
 * [`python`](https://ghcr.io/rblaine95/python)
 * [`rust`](https://ghcr.io/rblaine95/rust)
