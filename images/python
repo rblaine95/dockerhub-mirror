@@ -8,6 +8,7 @@ rc-slim-buster
 rc-alpine
 
 3
+3.12
 3.11
 3.10
 3.9
@@ -17,6 +18,7 @@ rc-alpine
 
 bookworm
 3-bookworm
+3.12-bookworm
 3.11-bookworm
 3.10-bookworm
 3.9-bookworm
@@ -25,6 +27,7 @@ bookworm
 
 slim-bookworm
 3-slim-bookworm
+3.12-slim-bookworm
 3.11-slim-bookworm
 3.10-slim-bookworm
 3.9-slim-bookworm
@@ -33,6 +36,7 @@ slim-bookworm
 
 bullseye
 3-bullseye
+3.12-bullseye
 3.11-bullseye
 3.10-bullseye
 3.9-bullseye
@@ -42,6 +46,7 @@ bullseye
 
 slim-bullseye
 3-slim-bullseye
+3.12-slim-bullseye
 3.11-slim-bullseye
 3.10-slim-bullseye
 3.9-slim-bullseye
@@ -68,6 +73,7 @@ slim-buster
 3.6-slim-buster
 
 3-slim
+3.12-slim
 3.11-slim
 3.10-slim
 3.9-slim
@@ -76,6 +82,7 @@ slim-buster
 3.6-slim
 
 3-alpine
+3.12-alpine
 3.11-alpine
 3.10-alpine
 3.9-alpine
