@@ -1,6 +1,7 @@
 latest
 
 1
+1.22
 1.21
 1.20
 1.19
@@ -11,12 +12,14 @@ latest
 
 bookworm
 1-bookworm
+1.22-bookworm
 1.21-bookworm
 1.20-bookworm
 1.19-bookworm
 
 bullseye
 1-bullseye
+1.22-bullseye
 1.21-bullseye
 1.20-bullseye
 1.19-bullseye
@@ -35,6 +38,7 @@ buster
 
 alpine
 1-alpine
+1.22-alpine
 1.21-alpine
 1.20-alpine
 1.19-alpine
