@@ -2,6 +2,7 @@ latest
 
 bookworm
 12
+12.5
 12.4
 12.2
 12.1
@@ -9,6 +10,7 @@ bookworm
 
 bookworm-slim
 12-slim
+12.5-slim
 12.4-slim
 12.2-slim
 12.1-slim
@@ -16,6 +18,8 @@ bookworm-slim
 
 bullseye
 11
+11.9
+11.8
 11.7
 11.6
 11.5
@@ -27,6 +31,8 @@ bullseye
 
 bullseye-slim
 11-slim
+11.9-slim
+11.8-slim
 11.7-slim
 11.6-slim
 11.5-slim
