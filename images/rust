@@ -1,6 +1,7 @@
 latest
 
 1
+1.77
 1.76
 1.75
 1.74
@@ -31,6 +32,7 @@ latest
 
 slim
 1-slim
+1.77-slim
 1.76-slim
 1.75-slim
 1.74-slim
@@ -61,6 +63,7 @@ slim
 
 slim-bookworm
 1-slim-bookworm
+1.77-slim-bookworm
 1.76-slim-bookworm
 1.75-slim-bookworm
 1.74-slim-bookworm
@@ -74,6 +77,7 @@ slim-bookworm
 
 bookworm
 1-bookworm
+1.77-bookworm
 1.76-bookworm
 1.75-bookworm
 1.74-bookworm
@@ -87,6 +91,7 @@ bookworm
 
 slim-buster
 1-slim-buster
+1.77-slim-buster
 1.76-slim-buster
 1.75-slim-buster
 1.74-slim-buster
@@ -117,6 +122,7 @@ slim-buster
 
 buster
 1-buster
+1.77-buster
 1.76-buster
 1.75-buster
 1.74-buster
@@ -147,6 +153,7 @@ buster
 
 slim-bullseye
 1-slim-bullseye
+1.77-slim-bullseye
 1.76-slim-bullseye
 1.75-slim-bullseye
 1.74-slim-bullseye
@@ -174,6 +181,7 @@ slim-bullseye
 
 bullseye
 1-bullseye
+1.77-bullseye
 1.76-bullseye
 1.75-bullseye
 1.74-bullseye
@@ -203,6 +211,7 @@ bullseye
 
 alpine
 1-alpine
+1.77-alpine
 1.76-alpine
 1.75-alpine
 1.74-alpine
