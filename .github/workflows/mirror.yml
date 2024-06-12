@@ -44,7 +44,7 @@ jobs:
           username: ${{ github.repository_owner }}
           password: ${{ github.token }}
       - uses: actions/setup-go@v5
-      - uses: imjasonh/setup-crane@v0.3
+      - uses: imjasonh/setup-crane@v0.4
       - name: Mirror
         run: |
           for tag in $(cat ./images/${{ matrix.image }}); do
