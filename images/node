@@ -4,6 +4,7 @@ current
 
 lts
 
+22
 21
 20
 19
@@ -17,6 +18,7 @@ lts
 
 bookworm
 current-bookworm
+22-bookworm
 21-bookworm
 20-bookworm
 18-bookworm
@@ -25,6 +27,7 @@ current-bookworm
 bullseye
 current-bullseye
 lts-bullseye
+22-bullseye
 21-bullseye
 20-bullseye
 19-bullseye
@@ -50,6 +53,7 @@ lts-buster
 slim
 current-slim
 lts-slim
+22-slim
 21-slim
 20-slim
 19-slim
@@ -64,6 +68,7 @@ lts-slim
 bookworm-slim
 current-bookworm-slim
 lts-bookworm-slim
+22-bookworm-slim
 21-bookworm-slim
 20-bookworm-slim
 18-bookworm-slim
@@ -72,6 +77,7 @@ lts-bookworm-slim
 bullseye-slim
 current-bullseye-slim
 lts-bullseye-slim
+22-bullseye-slim
 21-bullseye-slim
 20-bullseye-slim
 19-bullseye-slim
@@ -83,6 +89,7 @@ lts-bullseye-slim
 
 current-alpine
 lts-alpine
+22-alpine
 21-alpine
 20-alpine
 19-alpine
