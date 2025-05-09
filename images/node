@@ -4,46 +4,46 @@ current
 
 lts
 
+24
 22
 20
-18
 
 bookworm
 current-bookworm
+24-bookworm
 22-bookworm
 20-bookworm
-18-bookworm
 
 bullseye
 current-bullseye
 lts-bullseye
+24-bullseye
 22-bullseye
 20-bullseye
-18-bullseye
 
 slim
 current-slim
 lts-slim
+24-slim
 22-slim
 20-slim
-18-slim
 
 bookworm-slim
 current-bookworm-slim
 lts-bookworm-slim
+24-bookworm-slim
 22-bookworm-slim
 20-bookworm-slim
-18-bookworm-slim
 
 bullseye-slim
 current-bullseye-slim
 lts-bullseye-slim
+24-bullseye-slim
 22-bullseye-slim
 20-bullseye-slim
-18-bullseye-slim
 
 current-alpine
 lts-alpine
+24-alpine
 22-alpine
 20-alpine
-18-alpine
