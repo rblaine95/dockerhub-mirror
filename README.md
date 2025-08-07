@@ -11,6 +11,7 @@ Mirrored Images:
 * [`alpine`](https://ghcr.io/rblaine95/alpine)
 * [`busybox`](https://ghcr.io/rblaine95/busybox)
 * [`debian`](https://ghcr.io/rblaine95/debian)
+* [`eclipse-temurin`](https://ghcr.io/rblaine95/eclipse-temurin)
 * [`golang`](https://ghcr.io/rblaine95/golang)
 * [`mysql`](https://ghcr.io/rblaine95/mysql)
 * [`node`](https://ghcr.io/rblaine95/node)

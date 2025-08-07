@@ -19,6 +19,8 @@ jobs:
             repo: docker.io
           - image: debian
             repo: docker.io
+          - image: eclipse-temurin
+            repo: docker.io
           - image: golang
             repo: docker.io
           - image: mysql
