@@ -1,5 +1,14 @@
 latest
 
+stable
+stable-slim
+
+trixie
+13
+
+trixie-slim
+13-slim
+
 bookworm
 12
 
