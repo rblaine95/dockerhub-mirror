@@ -47,7 +47,7 @@ jobs:
           registry: ghcr.io
           username: ${{ github.repository_owner }}
           password: ${{ github.token }}
-      - uses: actions/setup-go@v5
+      - uses: actions/setup-go@v6
       - uses: imjasonh/setup-crane@v0.4
       - name: Mirror
         run: |
