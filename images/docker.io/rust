@@ -15,6 +15,11 @@ slim
 1.86-slim
 1.85-slim
 
+slim-trixie
+1-slim-trixie
+1.89-slim-trixie
+1.88-slim-trixie
+
 slim-bookworm
 1-slim-bookworm
 1.89-slim-bookworm
