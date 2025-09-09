@@ -1,24 +1,20 @@
 latest
 
 1
+1.25
 1.24
-1.23
-1.22
+
+trixie
+1-trixie
+1.25-trixie
+1.24-trixie
 
 bookworm
 1-bookworm
+1.25-bookworm
 1.24-bookworm
-1.23-bookworm
-1.22-bookworm
-
-bullseye
-1-bullseye
-1.24-bullseye
-1.23-bullseye
-1.22-bullseye
 
 alpine
 1-alpine
+1.25-alpine
 1.24-alpine
-1.23-alpine
-1.22-alpine
