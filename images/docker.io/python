@@ -12,6 +12,22 @@ rc-alpine
 3.10
 3.9
 
+trixie
+3-trixie
+3.13-trixie
+3.12-trixie
+3.11-trixie
+3.10-trixie
+3.9-trixie
+
+slim-trixie
+3-slim-trixie
+3.13-slim-trixie
+3.12-slim-trixie
+3.11-slim-trixie
+3.10-slim-trixie
+3.9-slim-trixie
+
 bookworm
 3-bookworm
 3.13-bookworm
