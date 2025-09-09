@@ -8,6 +8,12 @@ lts
 22
 20
 
+trixie
+current-trixie
+24-trixie
+22-trixie
+20-trixie
+
 bookworm
 current-bookworm
 24-bookworm
@@ -28,6 +34,12 @@ lts-slim
 22-slim
 20-slim
 
+trixie-slim
+current-trixie-slim
+24-trixie-slim
+22-trixie-slim
+20-trixie-slim
+
 bookworm-slim
 current-bookworm-slim
 lts-bookworm-slim
@@ -42,6 +54,7 @@ lts-bullseye-slim
 22-bullseye-slim
 20-bullseye-slim
 
+alpine
 current-alpine
 lts-alpine
 24-alpine
