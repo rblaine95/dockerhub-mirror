@@ -6,22 +6,23 @@ rc-slim-bullseye
 rc-alpine
 
 3
+3.14
 3.13
 3.12
 3.11
 3.10
-3.9
 
 trixie
 3-trixie
+3.14-trixie
 3.13-trixie
 3.12-trixie
 3.11-trixie
 3.10-trixie
-3.9-trixie
 
 slim-trixie
 3-slim-trixie
+3.14-slim-trixie
 3.13-slim-trixie
 3.12-slim-trixie
 3.11-slim-trixie
@@ -30,46 +31,46 @@ slim-trixie
 
 bookworm
 3-bookworm
+3.14-bookworm
 3.13-bookworm
 3.12-bookworm
 3.11-bookworm
 3.10-bookworm
-3.9-bookworm
 
 slim-bookworm
 3-slim-bookworm
+3.14-slim-bookworm
 3.13-slim-bookworm
 3.12-slim-bookworm
 3.11-slim-bookworm
 3.10-slim-bookworm
-3.9-slim-bookworm
 
 bullseye
 3-bullseye
+3.14-bullseye
 3.13-bullseye
 3.12-bullseye
 3.11-bullseye
 3.10-bullseye
-3.9-bullseye
 
 slim-bullseye
 3-slim-bullseye
+3.14-slim-bullseye
 3.13-slim-bullseye
 3.12-slim-bullseye
 3.11-slim-bullseye
 3.10-slim-bullseye
-3.9-slim-bullseye
 
 3-slim
+3.14-slim
 3.13-slim
 3.12-slim
 3.11-slim
 3.10-slim
-3.9-slim
 
 3-alpine
+3.14-alpine
 3.13-alpine
 3.12-alpine
 3.11-alpine
 3.10-alpine
-3.9-alpine
