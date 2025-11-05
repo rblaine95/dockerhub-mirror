@@ -27,8 +27,6 @@ jobs:
             repo: docker.io
           - image: node
             repo: docker.io
-          - image: openjdk
-            repo: docker.io
           - image: postgres
             repo: docker.io
           - image: python
