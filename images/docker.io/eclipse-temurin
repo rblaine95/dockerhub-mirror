@@ -1,30 +1,36 @@
 latest
 
+25
 21
 17
 11
 8
 
+25-alpine
 21-alpine
 17-alpine
 11-alpine
 8-alpine
 
+25-jre
 21-jre
 17-jre
 11-jre
 8-jre
 
+25-jre-alpine
 21-jre-alpine
 17-jre-alpine
 11-jre-alpine
 8-jre-alpine
 
+25-jdk
 21-jdk
 17-jdk
 11-jdk
 8-jdk
 
+25-jdk-alpine
 21-jdk-alpine
 17-jdk-alpine
 11-jdk-alpine
