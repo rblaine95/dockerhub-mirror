@@ -1,9 +1,15 @@
+# https://docs.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
 version: 2
+
 updates:
-  # Maintain dependencies for GitHub Actions
-  - package-ecosystem: "github-actions"
-    directory: "/"
+  # Maintain dependencies for Github Actions
+  - package-ecosystem: github-actions
+    directory: /
     schedule:
-      interval: "daily"
-    reviewers:
-      - rblaine95
+      interval: weekly
+    groups:
+      github-actions:
+        patterns:
+          - "*"
+    cooldown:
+      default-days: 1
